@@ -1,0 +1,3 @@
+[submodule "fwk"]
+	path = fwk
+	url = https://github.com/AlexeyBond/old-python-game-fwk.git
