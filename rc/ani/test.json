@@ -1,0 +1,38 @@
+{
+	"default" : [
+		{
+			"img" : "rc/img/32x32fg.png",
+			"t" : 1,
+			"anchor" : "center"
+		},
+		{
+			"img" : "rc/img/32x32fgA.png",
+			"t" : 0.3,
+			"anchor" : "center"
+		}
+	],
+	"non-default" : [
+		{
+			"img" : "rc/img/32x32fg.png",
+			"t" : 0.1,
+			"anchor" : "center",
+			"rect" : {
+				"bottom" : 0,
+				"left" : 0,
+				"width" : 32,
+				"height" : 32
+			}
+		},
+		{
+			"img" : "rc/img/32x32fgA.png",
+			"t" : 0.1,
+			"anchor" : "center",
+			"rect" : {
+				"bottom" : 0,
+				"left" : 0,
+				"width" : 32,
+				"height" : 32
+			}
+		}
+	]
+}
