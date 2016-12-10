@@ -1,11 +1,63 @@
 {
-	"entities" : [
-		{
-			"_class": "inner:player",
-			"position": [0,0],
-			"id": "player",
-			"sprite": "rc/img/64x64fg.png",
-			"spriteAnchor": "center"
-		}
-	]
+  "entities": [
+    {
+      "_class": "inner:player",
+      "position": [
+        0,
+        0
+      ],
+      "id": "player",
+      "sprite": "rc/img/64x64fg.png",
+      "spriteAnchor": "center"
+    },
+    {
+      "_class": "inner:selector",
+      "sprite": "rc/img/selector.png",
+      "id": "selector",
+      "scale": 0.5,
+      "spriteAnchor": "center"
+    },
+    {
+      "_class": "inner:havalnik",
+      "position": [0, 100],
+      "sprite": "rc/img/32x32fg.png",
+      "spriteAnchor": "center"
+    },
+    {
+      "_class": "inner:hole",
+      "position": [100, 100],
+      "sprite": "rc/img/32x32fg.png",
+      "spriteAnchor": "center"
+    },
+    {
+      "_class": "inner:itemPlace",
+      "position": [0, -100],
+      "sprite": "rc/img/32x32fg.png",
+      "spriteAnchor": "center"
+    },
+    {
+      "_class": "inner:itemPlace",
+      "position": [50, -100],
+      "sprite": "rc/img/32x32fg.png",
+      "spriteAnchor": "center"
+    },
+    {
+      "_class": "inner:itemPlace",
+      "position": [-50, -100],
+      "sprite": "rc/img/32x32fg.png",
+      "spriteAnchor": "center"
+    },
+    {
+      "_class": "inner:itemPlace",
+      "position": [100, -100],
+      "sprite": "rc/img/32x32fg.png",
+      "spriteAnchor": "center"
+    },
+    {
+      "_class": "inner:itemPlace",
+      "position": [-100, -100],
+      "sprite": "rc/img/32x32fg.png",
+      "spriteAnchor": "center"
+    }
+  ]
 }

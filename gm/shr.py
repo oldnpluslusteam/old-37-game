@@ -15,6 +15,11 @@ class SharedGameState:
     def get_stat(self, name):
         return self._stats[name]
 
+    @property
+    def items_queue(self):
+        return self._itemQueue
+
+
 class ItemType:
     def __init__(self, name, effect, spriteName):
         self._name = name
