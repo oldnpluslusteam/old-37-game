@@ -4,8 +4,9 @@
 			"_class": "outer:player",
 			"position": [0,0],
 			"id": "player",
-			"sprite": "rc/img/64x64fg.png",
-			"spriteAnchor": "center"
+			"sprite": "rc/img/Garazh.png",
+			"spriteAnchor": "center",
+			"scale": 0.1
 		}
 	]
 }

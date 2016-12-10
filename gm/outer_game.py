@@ -1,20 +1,12 @@
-from fwk.game.entity import *
-from fwk.game.entity_mixin import *
+#coding=UTF-8
 from fwk.game.game import *
 from fwk.util.all import *
 from fwk.ui.layers.gameLayer import GameLayer as GameLayer_
-
 
 class OuterGame(Game):
     def __init__(self, sstate):
         Game.__init__(self)
         self._sstate = sstate
-
-
-@GameEntity.defineClass('outer:player')
-class OuterPlayer(GameEntity, Sprite, CameraTarget):
-    pass
-
 
 class OuterGameLayer(GameLayer_):
     def init(self, *args, **kwargs):

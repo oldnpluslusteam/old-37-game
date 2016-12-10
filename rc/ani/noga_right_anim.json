@@ -1,0 +1,38 @@
+{
+    "walk": [
+        {
+            "img": "rc/img/noga_1.png",
+            "t": 0.6,
+            "anchor": "center",
+            "transform": {
+                "flip_x": true
+            }
+        },
+        {
+            "img": "rc/img/noga_2.png",
+            "t": 0.6,
+            "anchor": "center",
+            "transform": {
+                "flip_x": true
+            }
+        },
+        {
+            "img": "rc/img/noga_3.png",
+            "t": 0.6,
+            "anchor": "center",
+            "transform": {
+                "flip_x": true
+            }
+        }
+    ],
+    "stand": [
+        {
+            "img": "rc/img/noga_2.png",
+            "t": 1,
+            "anchor": "center",
+            "transform": {
+                "flip_x": true
+            }
+        }
+    ]
+}

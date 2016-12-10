@@ -1,0 +1,26 @@
+{
+    "walk": [
+        {
+            "img": "rc/img/noga_1.png",
+            "t": 0.6,
+            "anchor": "center"
+        },
+        {
+            "img": "rc/img/noga_2.png",
+            "t": 0.6,
+            "anchor": "center"
+        },
+        {
+            "img": "rc/img/noga_3.png",
+            "t": 0.6,
+            "anchor": "center"
+        }
+    ],
+    "stand": [
+        {
+            "img": "rc/img/noga_2.png",
+            "t": 1,
+            "anchor": "center"
+        }
+    ]
+}
