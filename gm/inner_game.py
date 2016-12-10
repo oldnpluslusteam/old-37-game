@@ -18,15 +18,15 @@ _PLAYER_ANGLES = [
     5, 4, 3
 ]
 _MIN_SELECT_DST = 50
-
+_START_ITEMS = ['ogurezz'] * 4
 
 class InnerGame(Game):
     def __init__(self, sstate):
         Game.__init__(self)
         self._sstate = sstate
 
-        for _ in range(5):
-            sstate.items_queue.append(item_types.ITEMS['ogurezz'])
+        for _ in _START_ITEMS:
+            sstate.items_queue.append(item_types.ITEMS[_])
 
     @property
     def sstate(self):

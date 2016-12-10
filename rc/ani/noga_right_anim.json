@@ -2,7 +2,7 @@
     "walk": [
         {
             "img": "rc/img/noga_3.png",
-            "t": 0.4,
+            "t": 0.6,
             "anchor": "center",
             "transform": {
                 "flip_x": false
@@ -18,7 +18,7 @@
         },
         {
             "img": "rc/img/noga_1.png",
-            "t": 0.7,
+            "t": 0.6,
             "anchor": "center",
             "transform": {
                 "flip_x": false
