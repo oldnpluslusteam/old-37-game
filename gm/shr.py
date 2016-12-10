@@ -5,13 +5,17 @@ class SharedGameState:
 
         self.set_stat('hp-xyz', .5)
         self.set_stat('hp-rust', .5)
-        self.set_stat('energy', .5)
+        self.set_stat('energy', 1)
 
     def set_stat(self, name, value):
         self._stats[name] = min(max(0., value), 1.)
 
     def get_stat(self, name):
         return self._stats[name]
+
+    def apply_effects(self, effects):
+        for stat, f in effects.items():
+            self.set_stat(stat, eval(f.format(self.get_stat(stat))))
 
     @property
     def items_queue(self):
@@ -29,8 +33,7 @@ class ItemType:
         :param state:SharedGameState
         :return:
         """
-        for stat, f in self._effect.items():
-            state.set_stat(stat, eval(f.format(state.get_stat(stat))))
+        state.apply_effects(self._effect)
 
     @property
     def sprite(self):

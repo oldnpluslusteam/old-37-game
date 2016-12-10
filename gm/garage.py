@@ -4,6 +4,7 @@ from gm.leg import Leg
 
 from fwk.util.all import *
 
+_K_ENERGY = 3.
 _K_ANGULAR = 10.
 _K_LINEAR = 50
 
@@ -31,8 +32,9 @@ class Garage(GameEntity, GameEntity.mixin.Sprite, GameEntity.mixin.CameraTarget,
 	def update(self, dt):
 		# Определённо, это один из самых жестоких способов перемещения игрока, что мне когда-либо приходилось писать.
 		if self._rl.isMoving() or self._ll.isMoving():
-			ka = (1 if self._ll.isMoving() else 0) - (1 if self._rl.isMoving() else 0)
-			kl = (1 if self._rl.isMoving() else 0) + (1 if self._ll.isMoving() else 0)
+			ke = self.game.sstate.get_stat('energy') * _K_ENERGY
+			ka = (ke if self._ll.isMoving() else 0) - (ke if self._rl.isMoving() else 0)
+			kl = (ke if self._rl.isMoving() else 0) + (ke if self._ll.isMoving() else 0)
 			self.angularVelocity = ka * _K_ANGULAR
 			dx, dy = directionFromAngle(self.rotation)
 			self.velocity = (_K_LINEAR * dx * kl, _K_LINEAR * dy * kl)

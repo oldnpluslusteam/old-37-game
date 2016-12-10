@@ -9,6 +9,10 @@ class OuterGame(Game):
         Game.__init__(self)
         self._sstate = sstate
 
+    @property
+    def sstate(self):
+        return self._sstate
+
 
 class OuterGameLayer(GameLayer_):
     def init(self, *args, **kwargs):
