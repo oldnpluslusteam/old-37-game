@@ -74,6 +74,7 @@ class InnerPlayer(GameEntity, Sprite, CameraTarget, Movement):
         self._item = item
         return i
 
+
 @GameEntity.defineClass('inner:itemPlace')
 class InnerItemPlace(GameEntity, Sprite, Movement):
     def spawn(self):
@@ -97,6 +98,7 @@ class InnerItemPlace(GameEntity, Sprite, Movement):
     def interact(self, player):
         self.place(player.swap_item(self._item))
 
+
 @GameEntity.defineClass('inner:havalnik')
 class InnerHavalnik(GameEntity, Sprite):
     def spawn(self):
@@ -109,6 +111,7 @@ class InnerHavalnik(GameEntity, Sprite):
             it.apply(self.game.sstate)
             print 'Amm', it
 
+
 @GameEntity.defineClass('inner:hole')
 class InnerHole(GameEntity, Sprite):
     def spawn(self):
@@ -120,13 +123,14 @@ class InnerHole(GameEntity, Sprite):
         if it is not None:
             print 'Broken', it
 
+
 @GameEntity.defineClass('inner:selector')
 class InnerSelector(GameEntity, Sprite, Movement):
     def spawn(self):
         self._selected = None
         self.angularVelocity = 100
 
-    def update(self,dt):
+    def update(self, dt):
         ents = self.game.getEntitiesByTag('interactive')
         player = self.game.getEntityById('player')
         nearest = None
@@ -146,6 +150,7 @@ class InnerSelector(GameEntity, Sprite, Movement):
     def act(self, player):
         if self._selected is not None:
             self._selected.interact(player)
+
 
 _KDICT = {KEY.W: '_v_fwd', KEY.A: '_v_lf', KEY.S: '_v_back', KEY.D: '_v_rt'}
 

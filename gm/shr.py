@@ -1,16 +1,14 @@
-
 class SharedGameState:
     def __init__(self):
         self._itemQueue = []
         self._stats = {}
 
-        self.set_stat('hp-xyz', 1)
-        self.set_stat('hp-rust', 1)
-        self.set_stat('energy', 1)
+        self.set_stat('hp-xyz', .5)
+        self.set_stat('hp-rust', .5)
+        self.set_stat('energy', .5)
 
     def set_stat(self, name, value):
         self._stats[name] = min(max(0., value), 1.)
-
 
     def get_stat(self, name):
         return self._stats[name]
@@ -41,4 +39,3 @@ class ItemType:
     @property
     def name(self):
         return self._name
-
