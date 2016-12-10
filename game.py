@@ -10,6 +10,7 @@ from gm.outer_game import *
 from gm.inner_game import *
 from gm.shr import *
 from gm.garage import *
+from gm.background import *
 
 from fwk.util.all import *
 

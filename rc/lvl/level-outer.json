@@ -1,12 +1,18 @@
 {
 	"entities" : [
 		{
+			"_class": "outer:background",
+			"position": [0,0],
+			"sprite": "rc/img/fon.png",
+			"spriteAnchor": "center"
+		},
+		{
 			"_class": "outer:player",
 			"position": [0,0],
 			"id": "player",
-			"sprite": "rc/img/Garazh.png",
+			"sprite": "rc/img/garazh.png",
 			"spriteAnchor": "center",
-			"scale": 0.1
+			"scale": 0.4
 		}
 	]
 }

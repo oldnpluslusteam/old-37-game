@@ -5,6 +5,8 @@ from gm.leg import Leg
 
 @GameEntity.defineClass('outer:player')
 class Garage(GameEntity, GameEntity.mixin.Sprite, GameEntity.mixin.CameraTarget):
+	z_index=5
+
 	def spawn(self):
 		self._attach_events = ['update', 'delete'] # без этого не работает
 
