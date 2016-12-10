@@ -1,0 +1,11 @@
+{
+	"entities" : [
+		{
+			"_class": "outer:player",
+			"position": [0,0],
+			"id": "player",
+			"sprite": "rc/img/64x64fg.png",
+			"spriteAnchor": "center"
+		}
+	]
+}
