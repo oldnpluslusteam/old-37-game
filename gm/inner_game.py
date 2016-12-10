@@ -11,7 +11,7 @@ class InnerGame(Game):
         self._sstate = sstate
 
 
-@GameEntity.defineClass('outer:player')
+@GameEntity.defineClass('inner:player')
 class InnerPlayer(GameEntity, Sprite, CameraTarget, Movement):
     def spawn(self):
         self._v_fwd = self._v_lf = self._v_rt = self._v_back = 0
