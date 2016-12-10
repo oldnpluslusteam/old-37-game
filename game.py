@@ -35,8 +35,15 @@ class StartupScreen(Screen):
 		ogame = OuterGame(sgs)
 		ogame.loadFromJSON('rc/lvl/level-outer.json')
 
+		ocamera = Camera()
+
 		igame = InnerGame(sgs)
 		igame.loadFromJSON('rc/lvl/level-inner.json')
+
+		icamera = Camera()
+
+		self.pushLayerFront(OuterGameLayer(game=ogame, camera=ocamera))
+		self.pushLayerFront(InnerGameLayer(game=igame, camera=icamera))
 
 		GAME_CONSOLE.write('Startup screen created.')
 
