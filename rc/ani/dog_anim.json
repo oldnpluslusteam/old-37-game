@@ -25,7 +25,7 @@
             }
         },
         {
-            "img": "rc/img/Dog/Dog1.png",
+            "img": "rc/img/Dog/Dog4.png",
             "t": 0.1,
             "anchor": "center",
             "transform": {
