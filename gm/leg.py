@@ -26,6 +26,9 @@ class Leg(GameEntity, GameEntity.mixin.Animation, GameEntity.mixin.Attached):
         self.game.sstate.apply_effects(_STEP_EFFECT)
 
     def doAttack(self):
+        if self._state != 'idle':
+            return
+
         attack_shift = 200
         x_, y_ = perpendicularDirection(directionFromAngle(self.rotation))
         if self.side == 'left':
