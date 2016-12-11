@@ -14,8 +14,9 @@ class Collidable:
 	'''
 
 	def spawn(self):
-		self.addTags(self, [COLLIDABLE_ENTITY_TAG])
+		self.addTags(self, COLLIDABLE_ENTITY_TAG)
 		self._size = 0
+		self.listen(COLLIDABLE_ACTION_NAME)
 
 	@property
 	def size(self):
@@ -23,18 +24,18 @@ class Collidable:
 
 	@size.setter
 	def size(self, new_size):
-		self.size = new_size
+		self._size = new_size
 
 	def update(self, dt):
 		other_collidables  = self.game.getEntitiesByTag(COLLIDABLE_ENTITY_TAG)
 
 		for other_collidable in other_collidables:
-			if self.is_collide(other_collidable):
+			if self != other_collidable and self.is_collide(other_collidable):
 				self.trigger_collision(other_collidable)
 
 	def is_collide(self, other_collidable):
 		dist = distance(self.position, other_collidable.position)
-		r_sum = self.size + other_collidable.size()
+		r_sum = self.size + other_collidable.size
 		return dist < r_sum
 
 	def trigger_collision(self, other_collidable):
