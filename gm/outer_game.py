@@ -3,13 +3,20 @@ from fwk.game.game import *
 from fwk.util.all import *
 from fwk.ui.layers.gameLayer import GameLayer as GameLayer_
 
+import random as rnd
+
 import arrows
+import enemy
 
 _NUM_ARROWS = 100
 _FIRST_ARROW_POS = (0, 200)
 _BG_RANGE_X = (-3, 4)
 _BG_RANGE_Y = (-3, 4)
 _BG_IMAGE = LoadTexture('rc/img/fon.png')
+
+_GEN_EXTERNAL_RANGE = 2000
+_GEN_INTERNAL_RANGE = 1000
+_GEN_ENEMIES_IN_RANGE = 100
 
 _bg_positions = [(a, b) for a in range(*_BG_RANGE_X) for b in range(*_BG_RANGE_Y)]
 
@@ -21,6 +28,7 @@ class OuterGame(Game):
         self.addEntity(arrows.OuterGlobalArrow.make_initial(_FIRST_ARROW_POS, _NUM_ARROWS))
         self._bg_sprites = zip(_bg_positions, [self.createSprite(_BG_IMAGE, -200) for _ in _bg_positions])
         self._bg_sizes = (self._bg_sprites[0][1].width, self._bg_sprites[0][1].height)
+        self.scheduleAfter(1, self._generate_enemies)
 
     @property
     def sstate(self):
@@ -35,6 +43,25 @@ class OuterGame(Game):
             ox, oy = off
             spr.x = (cx + ox) * sx
             spr.y = (cy + oy) * sy
+
+    def _generate_enemies(self):
+        self.scheduleAfter(1, self._generate_enemies)
+        pp = self.getEntityById('player').position
+        for e in self.getEntitiesByTag('enemy'):
+            if abs(pp[0] - e.position[0]) > _GEN_INTERNAL_RANGE or abs(pp[1] - e.position[1]) > _GEN_INTERNAL_RANGE:
+                e.destroy()
+
+        for _ in range(_GEN_ENEMIES_IN_RANGE):
+            ex = rnd.uniform(pp[0] - _GEN_EXTERNAL_RANGE, pp[0] + _GEN_EXTERNAL_RANGE)
+            ey = rnd.uniform(pp[1] - _GEN_EXTERNAL_RANGE, pp[1] + _GEN_EXTERNAL_RANGE)
+
+            if abs(ex - pp[0]) > _GEN_INTERNAL_RANGE and abs(ey - pp[0]) > _GEN_INTERNAL_RANGE:
+                self._spawn_single_enemy((ex, ey))
+
+    def _spawn_single_enemy(self, pos):
+        e = enemy.Enemy()
+        self.addEntity(e)
+        e.position = pos
 
     def drawSprites(self):
         Game.drawSprites(self)
