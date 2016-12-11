@@ -7,7 +7,7 @@ from gm.mixins import *
 class Enemy(GameEntity, Animation, Collidable):
 
 	def spawn(self):
-		pass
+		self.animations = 'rc/ani/dog_anim.json'
 
 	def update(self, dt):
 		self.game.getEntityById('player')

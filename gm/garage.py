@@ -1,6 +1,7 @@
 # coding=utf-8
 from fwk.game.entity import GameEntity
-from gm.leg import Leg
+from gm.leg import *
+from gm.garage_shadow import *
 
 from fwk.util.all import *
 
@@ -31,6 +32,13 @@ class Garage(GameEntity, GameEntity.mixin.Sprite, GameEntity.mixin.CameraTarget,
 		right_leg.animation = 'stand'
 		right_leg.side = 'right'
 		self._rl = right_leg
+
+		shadow = GarageShadow()
+		self.game.addEntity(shadow)
+		shadow.attach(self)
+		shadow.animations = "rc/ani/shadow_anim.json"
+		shadow.animation = 'stand'
+		self._sl = shadow
 
 	def update(self, dt):
 		# Определённо, это один из самых жестоких способов перемещения игрока, что мне когда-либо приходилось писать.

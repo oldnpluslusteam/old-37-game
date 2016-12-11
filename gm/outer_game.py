@@ -48,12 +48,16 @@ class OuterGameLayer(GameLayer_):
     def on_key_press(self, key, mod):
         if key == KEY.NUM_4:
             self._player.do('l', 'Attack')
+            self._player.do('s', 'Attack')
         if key == KEY.NUM_1:
             self._player.do('l', 'Step')
+            self._player.do('s', 'Step')
         if key == KEY.NUM_6:
             self._player.do('r', 'Attack')
+            self._player.do('s', 'Attack')
         if key == KEY.NUM_3:
             self._player.do('r', 'Step')
+            self._player.do('s', 'Step')
 
     def draw(self):
         GameLayer_.draw(self)

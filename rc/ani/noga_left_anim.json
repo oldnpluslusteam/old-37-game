@@ -45,16 +45,24 @@
     ],
     "attack": [
         {
-            "img": "rc/img/noga_1.png",
-            "t": 0.5,
+            "img": "rc/img/hit 1.png",
+            "t": 0.4,
             "anchor": "center",
             "transform": {
                 "flip_x": false
             }
         },
         {
-            "img": "rc/img/noga_2.png",
-            "t": 0.5,
+            "img": "rc/img/hit 2.png",
+            "t": 0.4,
+            "anchor": "center",
+            "transform": {
+                "flip_x": false
+            }
+        },
+        {
+            "img": "rc/img/noga_1.png",
+            "t": 0.2,
             "anchor": "center",
             "transform": {
                 "flip_x": false

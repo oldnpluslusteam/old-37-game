@@ -1,71 +1,71 @@
 {
     "walk": [
         {
-            "img": "rc/img/noga_2.png",
+            "img": "rc/img/ten9.png",
             "t": 0.3,
             "anchor": "center",
             "transform": {
-                "flip_x": true
+                "flip_x": false
             }
         },
         {
-            "img": "rc/img/noga_3.png",
+            "img": "rc/img/ten10.png",
             "t": 0.3,
             "anchor": "center",
             "transform": {
-                "flip_x": true
+                "flip_x": false
             }
         },
         {
-            "img": "rc/img/noga_2.png",
+            "img": "rc/img/ten11.png",
             "t": 0.3,
             "anchor": "center",
             "transform": {
-                "flip_x": true
+                "flip_x": false
             }
         },
         {
-            "img": "rc/img/noga_1.png",
+            "img": "rc/img/ten10.png",
             "t": 0.1,
             "anchor": "center",
             "transform": {
-                "flip_x": true
+                "flip_x": false
             }
         }
     ],
     "stand": [
         {
-            "img": "rc/img/noga_1.png",
+            "img": "rc/img/ten9.png",
             "t": 1,
             "anchor": "center",
             "transform": {
-                "flip_x": true
+                "flip_x": false
             }
         }
     ],
     "attack": [
         {
-            "img": "rc/img/hit 1.png",
+            "img": "rc/img/ten10.png",
             "t": 0.4,
             "anchor": "center",
             "transform": {
-                "flip_x": true
+                "flip_x": false
             }
         },
         {
-            "img": "rc/img/hit 2.png",
+            "img": "rc/img/ten9.png",
             "t": 0.4,
             "anchor": "center",
             "transform": {
-                "flip_x": true
+                "flip_x": false
             }
         },
         {
-            "img": "rc/img/noga_1.png",
+            "img": "rc/img/ten11.png",
             "t": 0.2,
             "anchor": "center",
             "transform": {
-                "flip_x": true
+                "flip_x": false
             }
         }
     ]
