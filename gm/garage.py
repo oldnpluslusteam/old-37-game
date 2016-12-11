@@ -8,6 +8,7 @@ _K_ENERGY = 3.
 _K_ANGULAR = 10.
 _K_LINEAR = 50
 
+
 @GameEntity.defineClass('outer:player')
 class Garage(GameEntity, GameEntity.mixin.Sprite, GameEntity.mixin.CameraTarget, GameEntity.mixin.Movement):
 	z_index=5

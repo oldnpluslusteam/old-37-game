@@ -3,6 +3,7 @@ from fwk.ui.layers.texture9TileItem import *
 from fwk.ui.layers.guiItem import GUIItemLayer
 from pyglet import gl
 
+
 class ProgressBar(GUIItemLayer):
     def init(self, grow_origin, expression, *args, **kwargs):
         self._expression = expression

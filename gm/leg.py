@@ -4,6 +4,7 @@ from fwk.game.entity import GameEntity
 _STEP_DURATION = 1.
 _STEP_EFFECT = {'energy': '{0}*0.99'}
 
+
 class Leg(GameEntity, GameEntity.mixin.Animation, GameEntity.mixin.Attached):
     def spawn(self):
         self._go_to_idle()

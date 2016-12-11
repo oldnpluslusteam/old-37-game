@@ -3,11 +3,17 @@ from fwk.game.game import *
 from fwk.util.all import *
 from fwk.ui.layers.gameLayer import GameLayer as GameLayer_
 
+import arrows
+
+_NUM_ARROWS = 100
+_FIRST_ARROW_POS = (0, 200)
+
 
 class OuterGame(Game):
     def __init__(self, sstate):
         Game.__init__(self)
         self._sstate = sstate
+        self.addEntity(arrows.OuterGlobalArrow.make_initial(_FIRST_ARROW_POS, _NUM_ARROWS))
 
     @property
     def sstate(self):
