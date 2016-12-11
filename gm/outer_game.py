@@ -9,7 +9,7 @@ _NUM_ARROWS = 100
 _FIRST_ARROW_POS = (0, 200)
 _BG_RANGE_X = (-3, 4)
 _BG_RANGE_Y = (-3, 4)
-_BG_IMAGE = LoadTexture('rc/img/256x256bg.png')
+_BG_IMAGE = LoadTexture('rc/img/fon.png')
 
 _bg_positions = [(a, b) for a in range(*_BG_RANGE_X) for b in range(*_BG_RANGE_Y)]
 

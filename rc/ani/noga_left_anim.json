@@ -1,37 +1,63 @@
 {
     "walk": [
         {
-            "img": "rc/img/noga_1.png",
-            "t": 0.6,
-            "anchor": "center",
-            "transform": {
-                "flip_x": true
-            }
-        },
-        {
             "img": "rc/img/noga_2.png",
-            "t": 0.6,
+            "t": 0.3,
             "anchor": "center",
             "transform": {
-                "flip_x": true
+                "flip_x": false
             }
         },
         {
             "img": "rc/img/noga_3.png",
-            "t": 0.6,
+            "t": 0.3,
             "anchor": "center",
             "transform": {
-                "flip_x": true
+                "flip_x": false
+            }
+        },
+        {
+            "img": "rc/img/noga_2.png",
+            "t": 0.3,
+            "anchor": "center",
+            "transform": {
+                "flip_x": false
+            }
+        },
+        {
+            "img": "rc/img/noga_1.png",
+            "t": 0.1,
+            "anchor": "center",
+            "transform": {
+                "flip_x": false
             }
         }
     ],
     "stand": [
         {
-            "img": "rc/img/noga_2.png",
+            "img": "rc/img/noga_1.png",
             "t": 1,
             "anchor": "center",
             "transform": {
-                "flip_x": true
+                "flip_x": false
+            }
+        }
+    ],
+    "attack": [
+        {
+            "img": "rc/img/noga_1.png",
+            "t": 0.5,
+            "anchor": "center",
+            "transform": {
+                "flip_x": false
+            }
+        },
+        {
+            "img": "rc/img/noga_2.png",
+            "t": 0.5,
+            "anchor": "center",
+            "transform": {
+                "flip_x": false
             }
         }
     ]
