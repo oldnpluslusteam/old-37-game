@@ -14,8 +14,8 @@ _BG_RANGE_X = (-3, 4)
 _BG_RANGE_Y = (-3, 4)
 _BG_IMAGE = LoadTexture('rc/img/fon.png')
 
-_GEN_EXTERNAL_RANGE = 500
-_GEN_INTERNAL_RANGE = 100
+_GEN_EXTERNAL_RANGE = 2000
+_GEN_INTERNAL_RANGE = 1000
 _GEN_ENEMIES_IN_RANGE = 100
 
 _bg_positions = [(a, b) for a in range(*_BG_RANGE_X) for b in range(*_BG_RANGE_Y)]
