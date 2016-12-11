@@ -18,7 +18,7 @@ _PLAYER_ANGLES = [
     5, 4, 3
 ]
 _MIN_SELECT_DST = 50
-_START_ITEMS = ['ogurezz'] * 4
+_START_ITEMS = ['ogurezz'] * 4 + ['ogurezz1'] * 4 + ['ogurezz2'] * 4
 
 class InnerGame(Game):
     def __init__(self, sstate):
@@ -83,6 +83,7 @@ class InnerItemPlace(GameEntity, Sprite, Movement):
         self.addTags('interactive', 'itemPlace')
         self._item = None
         self.angularVelocity = 100
+        self.scale = .05
 
     def place(self, item):
         if item is not None:
