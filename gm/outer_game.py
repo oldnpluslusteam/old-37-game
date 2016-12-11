@@ -7,6 +7,11 @@ import arrows
 
 _NUM_ARROWS = 100
 _FIRST_ARROW_POS = (0, 200)
+_BG_RANGE_X = (-3, 4)
+_BG_RANGE_Y = (-3, 4)
+_BG_IMAGE = LoadTexture('rc/img/256x256bg.png')
+
+_bg_positions = [(a, b) for a in range(*_BG_RANGE_X) for b in range(*_BG_RANGE_Y)]
 
 
 class OuterGame(Game):
@@ -14,10 +19,25 @@ class OuterGame(Game):
         Game.__init__(self)
         self._sstate = sstate
         self.addEntity(arrows.OuterGlobalArrow.make_initial(_FIRST_ARROW_POS, _NUM_ARROWS))
+        self._bg_sprites = zip(_bg_positions, [self.createSprite(_BG_IMAGE, -200) for _ in _bg_positions])
+        self._bg_sizes = (self._bg_sprites[0][1].width, self._bg_sprites[0][1].height)
 
     @property
     def sstate(self):
         return self._sstate
+
+    def update(self, dt):
+        px, py = self.getEntityById('player').position
+        sx, sy = self._bg_sizes
+        cx, cy = px // sx, py // sy
+
+        for off, spr in self._bg_sprites:
+            ox, oy = off
+            spr.x = (cx + ox) * sx
+            spr.y = (cy + oy) * sy
+
+    def drawSprites(self):
+        Game.drawSprites(self)
 
 
 class OuterGameLayer(GameLayer_):
