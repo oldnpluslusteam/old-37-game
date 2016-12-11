@@ -58,10 +58,12 @@ class InnerPlayer(GameEntity, Sprite, CameraTarget, Movement):
         )
 
         if dx != 0 or dy != 0:
-            self.animation = 'walk'
+            if self.animation != 'walk':
+                self.animation = 'walk'
             self.rotation = 45 * _PLAYER_ANGLES[(1 + dx) + 3 * (1 + dy)]
         else:
-            self.animation = 'idle'
+            if self.animation != 'idle':
+                self.animation = 'idle'
 
         x, y = self.position
         self.position = (
