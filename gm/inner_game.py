@@ -43,7 +43,7 @@ class InnerGame(Game):
 
 
 @GameEntity.defineClass('inner:player')
-class InnerPlayer(GameEntity, Sprite, CameraTarget, Movement):
+class InnerPlayer(GameEntity, GameEntity.mixin.Animation, CameraTarget, Movement):
     def spawn(self):
         self._v_fwd = self._v_lf = self._v_rt = self._v_back = 0
         self.animation = 'idle'
@@ -60,7 +60,7 @@ class InnerPlayer(GameEntity, Sprite, CameraTarget, Movement):
         if dx != 0 or dy != 0:
             if self.animation != 'walk':
                 self.animation = 'walk'
-            self.rotation = 45 * _PLAYER_ANGLES[(1 + dx) + 3 * (1 + dy)]
+            self.rotation = 45 * _PLAYER_ANGLES[(1 + dx) + 3 * (1 - dy)]
         else:
             if self.animation != 'idle':
                 self.animation = 'idle'

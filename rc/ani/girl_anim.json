@@ -1,7 +1,7 @@
 {
     "walk": [
         {
-            "img": "rc/img/Dog/Dog1.png",
+            "img": "rc/img/girl/girl 1.png",
             "t": 0.3,
             "anchor": "center",
             "transform": {
@@ -9,7 +9,7 @@
             }
         },
         {
-            "img": "rc/img/Dog/Dog2.png",
+            "img": "rc/img/girl/girl 2.png",
             "t": 0.3,
             "anchor": "center",
             "transform": {
@@ -17,7 +17,7 @@
             }
         },
         {
-            "img": "rc/img/Dog/Dog3.png",
+            "img": "rc/img/girl/girl 3.png",
             "t": 0.3,
             "anchor": "center",
             "transform": {
@@ -25,28 +25,10 @@
             }
         }
     ],
-    "stand": [
+    "idle": [
         {
-            "img": "rc/img/Dog/Dog1.png",
+            "img": "rc/img/girl/girl 1.png",
             "t": 1,
-            "anchor": "center",
-            "transform": {
-                "flip_x": false
-            }
-        }
-    ],
-    "attack": [
-        {
-            "img": "rc/img/Dog/Dog2.png",
-            "t": 0.05,
-            "anchor": "center",
-            "transform": {
-                "flip_x": false
-            }
-        },
-        {
-            "img": "rc/img/Dog/Dog3.png",
-            "t": 0.05,
             "anchor": "center",
             "transform": {
                 "flip_x": false

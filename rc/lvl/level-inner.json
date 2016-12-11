@@ -7,8 +7,8 @@
         0
       ],
       "id": "player",
-      "sprite": "rc/img/64x64fg.png",
-      "spriteAnchor": "center"
+      "animations": "rc/ani/girl_anim.json",
+      "scale": 0.4
     },
     {
       "_class": "inner:selector",
