@@ -12,7 +12,7 @@ _NUM_ARROWS = 100
 _FIRST_ARROW_POS = (0, 200)
 _BG_RANGE_X = (-3, 4)
 _BG_RANGE_Y = (-3, 4)
-_BG_IMAGE = LoadTexture('rc/img/256x256bg.png')
+_BG_IMAGE = LoadTexture('rc/img/fon.png')
 
 _GEN_EXTERNAL_RANGE = 500
 _GEN_INTERNAL_RANGE = 100

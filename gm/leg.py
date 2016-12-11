@@ -4,6 +4,7 @@ from fwk.util.geometry import *
 from gm.hurter import Hurter
 
 _STEP_DURATION = 1.
+_ATTACK_DURATION = 1.
 _STEP_EFFECT = {'energy': '{0}*0.99'}
 
 
@@ -31,7 +32,11 @@ class Leg(GameEntity, GameEntity.mixin.Animation, GameEntity.mixin.Attached):
             x_ = -x_
             y_ = -y_
         h_pos = map(lambda pos, pos_: pos_*attack_shift+pos, self.position, (x_, y_))
-        hurter = Hurter.static_init(self.game, self, h_pos, (0, 0), 200, 0, 10, 'bash', 'enemy')
+        hurter = Hurter.static_init(self.game, owner=self, position=h_pos, velocity=(0, 0), ttl=_ATTACK_DURATION,\
+                                    damage=0, radius=10, damage_type='bash', enemy_tag='enemy')
+        self.animation = 'attack'
+        self._state = 'attack'
+        self.game.scheduleAfter(_ATTACK_DURATION, self._go_to_idle)
 
     def isMoving(self):
         return self._state == 'step'

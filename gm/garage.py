@@ -20,7 +20,7 @@ class Garage(GameEntity, GameEntity.mixin.Sprite, GameEntity.mixin.CameraTarget,
 		self.game.addEntity(left_leg)
 		left_leg.attach(self)
 		left_leg.animations = "rc/ani/noga_left_anim.json"
-		left_leg.animation = 'walk'
+		left_leg.animation = 'stand'
 		left_leg.side = 'left'
 		self._ll = left_leg
 
@@ -28,7 +28,7 @@ class Garage(GameEntity, GameEntity.mixin.Sprite, GameEntity.mixin.CameraTarget,
 		self.game.addEntity(right_leg)
 		right_leg.attach(self)
 		right_leg.animations = "rc/ani/noga_right_anim.json"
-		right_leg.animation = 'walk'
+		right_leg.animation = 'stand'
 		right_leg.side = 'right'
 		self._rl = right_leg
 
