@@ -100,8 +100,12 @@ class InnerItemPlace(GameEntity, Sprite, Movement):
 
 
 @GameEntity.defineClass('inner:havalnik')
-class InnerHavalnik(GameEntity, Sprite):
+class InnerHavalnik(GameEntity, GameEntity.mixin.Animation):
+    z_index = -1
+
     def spawn(self):
+        self.animations = 'rc/ani/havalnik_anim.json'
+        self.animation = 'stand'
         self.addTags('interactive')
         self.active = True
 

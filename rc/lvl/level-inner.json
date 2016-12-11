@@ -19,9 +19,8 @@
     },
     {
       "_class": "inner:havalnik",
-      "position": [0, 100],
-      "sprite": "rc/img/32x32fg.png",
-      "spriteAnchor": "center"
+      "position": [0, 0],
+      "scale": 0.4
     },
     {
       "_class": "inner:hole",

@@ -54,15 +54,15 @@
         },
         {
             "img": "rc/img/hit 2.png",
-            "t": 0.4,
+            "t": 0.1,
             "anchor": "center",
             "transform": {
                 "flip_x": false
             }
         },
         {
-            "img": "rc/img/noga_1.png",
-            "t": 0.2,
+            "img": "rc/img/hit 3.png",
+            "t": 0.5,
             "anchor": "center",
             "transform": {
                 "flip_x": false

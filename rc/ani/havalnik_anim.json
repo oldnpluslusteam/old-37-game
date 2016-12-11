@@ -1,0 +1,24 @@
+{
+    "stand": [
+        {
+            "img": "rc/img/hole 1.png",
+            "t": 1,
+            "anchor": "center"
+        },
+        {
+            "img": "rc/img/hole 2.png",
+            "t": 1,
+            "anchor": "center"
+        },
+        {
+            "img": "rc/img/hole 3.png",
+            "t": 1,
+            "anchor": "center"
+        },
+        {
+            "img": "rc/img/hole 4.png",
+            "t": 1,
+            "anchor": "center"
+        }
+    ]
+}
