@@ -6,6 +6,7 @@ from gm.hurter import Hurter
 _STEP_DURATION = 1.
 _ATTACK_DURATION = 1.
 _STEP_EFFECT = {'energy': '{0}*0.99'}
+_ATTACK_EFFECT = {'energy': '{0}*0.95'}
 
 
 class Leg(GameEntity, GameEntity.mixin.Animation, GameEntity.mixin.Attached):
@@ -26,6 +27,9 @@ class Leg(GameEntity, GameEntity.mixin.Animation, GameEntity.mixin.Attached):
         self.game.sstate.apply_effects(_STEP_EFFECT)
 
     def doAttack(self):
+        if self._state != 'idle':
+            return
+
         attack_shift = 200
         x_, y_ = perpendicularDirection(directionFromAngle(self.rotation))
         if self.side == 'left':
@@ -37,6 +41,7 @@ class Leg(GameEntity, GameEntity.mixin.Animation, GameEntity.mixin.Attached):
         self.animation = 'attack'
         self._state = 'attack'
         self.game.scheduleAfter(_ATTACK_DURATION, self._go_to_idle)
+        self.game.sstate.apply_effects(_ATTACK_EFFECT)
 
     def isMoving(self):
         return self._state == 'step'
